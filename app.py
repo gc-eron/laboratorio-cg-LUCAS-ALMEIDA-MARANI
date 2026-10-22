@@ -1,9 +1,7 @@
 import streamlit as st
-import numpy as np
 
-st.title("Computação Gráfica")
-st.write("Meu nome é Lucas Almeida Marani.")
-n = st.slider("Tamanho", 2, 64, 8)
-img = np.random.randint(0, 256, (n, n), dtype=np.uint8)
-st.image(img, caption=f"Imagem {n}x{n}", width=300)
-st.write(img)
+paginas = [
+    st.Page("src/laboratorio_cg/atv1.py", title="Atv 1"),
+    st.Page("src/laboratorio_cg/atv2.py", title="Atv 2 - Bandeira do Brasil"),
+]
+st.navigation(paginas).run()
